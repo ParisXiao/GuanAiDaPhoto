@@ -296,7 +296,7 @@ public class ImageChangeAcitivty extends AppCompatActivity implements View.OnCli
         } else if (i == R.id.button2) {
             Intent intent = new Intent();
             intent.putExtra(ImageChangeAcitivty.RESULTIMAGE_BASE64, photo);
-            setResult(ImageChangeAcitivty.RESULTIMAGE_CODE, intent);  //多选不允许裁剪裁剪，返回数据
+            setResult(RESULT_OK, intent);  //多选不允许裁剪裁剪，返回数据
             finish();
 
         }
