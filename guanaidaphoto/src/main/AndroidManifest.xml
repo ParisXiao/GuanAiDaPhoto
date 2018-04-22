@@ -23,7 +23,11 @@
         android:theme="@style/Theme.AppCompat.Light.NoActionBar"
         tools:replace="android:icon,android:theme"
        >
-        <activity android:name=".ImageChangeAcitivty">
+        <activity android:name=".ImageChangeAcitivty"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            >
         </activity>
         <activity android:name=".imageloader.ui.ImageBaseActivity"/>
         <activity
