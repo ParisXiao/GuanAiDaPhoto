@@ -3,7 +3,8 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/ZhengJianProject.iml" filepath="$PROJECT_DIR$/ZhengJianProject.iml" />
-      <module fileurl="file://$PROJECT_DIR$/guanaidaphoto/app.iml" filepath="$PROJECT_DIR$/guanaidaphoto/app.iml" />
+      <module fileurl="file://D:\MyWork\OpenCV\ZhengJianProject\guanaidaphoto\app.iml" filepath="D:\MyWork\OpenCV\ZhengJianProject\guanaidaphoto\app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/guanaidaphoto/guanaidaphoto.iml" filepath="$PROJECT_DIR$/guanaidaphoto/guanaidaphoto.iml" />
     </modules>
   </component>
 </project>
