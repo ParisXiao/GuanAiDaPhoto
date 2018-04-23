@@ -16,6 +16,8 @@ import android.util.Log;
 import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.net.HttpURLConnection;
@@ -28,6 +30,29 @@ import java.util.Date;
  */
 public class PhotoUtils {
     public static int ResultCode = 100;
+    public static String saveBitmap(Bitmap mBitmap) {
+        File file = new File("/mnt/sdcard/");   //FILE_DIR自定义
+        if (!file.exists()) {
+            file.mkdir();
+        }
+        File tmpf = new File(file,   "result.jpg");
+        File f = tmpf;
+        try {
+            f.createNewFile();
+            FileOutputStream fOut = null;
+            fOut = new FileOutputStream(f);
+            mBitmap.compress(Bitmap.CompressFormat.JPEG, 100, fOut);
+            fOut.flush();
+            fOut.close();
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        String image_file_url=f.getAbsolutePath();
+        Log.i("image_file_url", image_file_url);
+        return image_file_url;
+    }
     /**
      * bitmap转为base64
      * @param bitmap

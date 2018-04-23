@@ -48,7 +48,7 @@ public class ImageChangeAcitivty extends AppCompatActivity implements View.OnCli
     private SeekBar seekBar2;
     private TextView textView2;
     public static final int RESULTIMAGE_CODE = 0x123 ;
-    public static final String RESULTIMAGE_BASE64 = "IMAGE_BASE64" ;
+    public static final String RESULTIMAGE = "IMAGE_BASE64" ;
     private String photo;
     private String deepenNum;
     private String dimNum;
@@ -295,8 +295,8 @@ public class ImageChangeAcitivty extends AppCompatActivity implements View.OnCli
 
         } else if (i == R.id.button2) {
             Intent intent = new Intent();
-            intent.putExtra(ImageChangeAcitivty.RESULTIMAGE_BASE64, photo);
-            setResult(RESULT_OK, intent);  //多选不允许裁剪裁剪，返回数据
+            intent.putExtra(ImageChangeAcitivty.RESULTIMAGE, PhotoUtils.saveBitmap(NewBitmap));
+            setResult(ImageChangeAcitivty.RESULTIMAGE_CODE, intent);  //多选不允许裁剪裁剪，返回数据
             finish();
 
         }

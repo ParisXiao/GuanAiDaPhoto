@@ -25,10 +25,9 @@
        >
         <activity android:name=".ImageChangeAcitivty"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar"
-            android:launchMode="singleTask"
             android:screenOrientation="portrait"
-            >
-        </activity>
+            android:launchMode="standard"
+            />
         <activity android:name=".imageloader.ui.ImageBaseActivity"/>
         <activity
             android:name=".imageloader.ui.ImageGridActivity"
